@@ -16,8 +16,8 @@ const workPost = [
     content:
       ' A fully responsive personal portfolio built using HTML, CSS, and JavaScript. It showcases my skills, projects, education, and contact details with a clean and modern UI designed to impress recruiters.',
     techology: ['Html', 'Css', 'javascript'],
-    live: 'https://subhashchandrabosecharitabletrust.in',
-    source: 'https://github.com/Chrissiku/Portfolio-mobile',
+    live: 'https://nithinportfolioin.netlify.app/',
+    source: 'https://github.com/Nithin134/personal-portfolio',
   },
 
   

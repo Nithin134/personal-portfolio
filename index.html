@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nithin's Portfolio</title>
+    <title>Nithin Tirukkovalluri | Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -13,258 +13,387 @@
   </head>
   <body>
     <!-- Popup window -->
-    <section class="popup" id="popup">
+    <section class="popup" id="popup"></section>
 
-    </section>
     <!-- Header section -->
-    <header>
-      <div class="brand"><a href="" class="color1">My  Personal   Portfolio</a></div>
-      <div class="menu">
-        <ul class="menu_list">
-          <li>
-            <a href="#portfolio" class="color1">Portoflio</a
-            ><i class="fa-solid fa-chevron-right"></i>
-          </li>
-          <li>
-            <a href="#about" class="color1">Projects</a
-            ><i class="fa-solid fa-chevron-right"></i>
-          </li>
-          <li>
-            <a href="#education" class="color1">Education</a
-            ><i class="fa-solid fa-chevron-right"></i>
-          </li>
-          <li>
-            <a href="#contact" class="color1">Conatct</a
-            ><i class="fa-solid fa-chevron-right"></i>
-          </li>
-          <li class="message">
-            <a href="mailto:balajiraotirukkovalluri@gmail.com" class="color1"
-              ><i class="fa-solid fa-envelope"></i
-            ></a>
-          </li>
-        </ul>
-        <a class="menu-icon"><i class="fa-solid fa-bars" id="menu"></i></a>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <a href="#portfolio" class="color1">Nithin Tirukkovalluri</a>
+        </div>
+        <nav class="menu" aria-label="Primary">
+          <ul class="menu_list">
+            <li><a href="#portfolio" class="color1">Home</a></li>
+            <li><a href="#projects" class="color1">Projects</a></li>
+            <li><a href="#education" class="color1">Education</a></li>
+            <li><a href="#contact" class="color1">Contact</a></li>
+            <li class="message">
+              <a href="mailto:balajiraotirukkovalluri@gmail.com" class="color1"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+          <a class="menu-icon" aria-label="Open menu">
+            <i class="fa-solid fa-bars" id="menu"></i>
+          </a>
+        </nav>
       </div>
     </header>
 
-    <!-- Home section -->
-    <section class="portfolio" id="portfolio">
-      <div class="portfolio-head text-center">
-        <h1 class="color2">Nithin Tirukkovalluri</h1>
-        <h2>Computer Science</h2>
+    <!-- Hero section -->
+    <section class="portfolio hero" id="portfolio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow color2">Computer Science Undergraduate</p>
+          <h1 class="hero-title">Building reliable backend systems & polished web apps.</h1>
+          <p class="hero-summary">
+            I’m a software engineer focused on backend and full‑stack development.
+            I enjoy designing APIs, data models, and clean user experiences that
+            help teams ship dependable products.
+          </p>
+          <div class="hero-roles">
+            <span><i class="fa-solid fa-code"></i> Software Engineer</span>
+            <span><i class="fa-solid fa-laptop-code"></i> Software Developer</span>
+            <span><i class="fa-solid fa-server"></i> Backend Developer</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn btn-secondary" href="#contact">Contact me</a>
+          </div>
+          <ul class="social hero-social" aria-label="Social links">
+            <li>
+              <a href="https://github.com/Nithin134">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nithin-tirukkovalluri-09aa66311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTYSdE4UxTnKtILq3gIdhFA%3D%3D"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:balajiraotirukkovalluri@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="highlight">
+            <span class="highlight-label">Location</span>
+            <strong>Rajahmundry, Andhra Pradesh</strong>
+          </div>
+          <div class="highlight">
+            <span class="highlight-label">Focus</span>
+            <strong>Backend systems & full-stack engineering</strong>
+          </div>
+          <div class="highlight">
+            <span class="highlight-label">Seeking</span>
+            <strong>Internships & project collaborations</strong>
+          </div>
+        </div>
       </div>
-
-      
-
-      <div class="portfolio-infos">
-        <p class="text-center">
- I'm a passionate engineering student passionate on building practical, user-friendly software solutions. I enjoy solving real-world problems through technology and continuous learning.
-        </p>
-        <div class="line"></div>
-        <div class="techo">
-          <div id="language">
+      <div class="container">
+        <div class="divider"></div>
+        <div class="skills-grid">
+          <div class="skill-block">
             <h3>Languages</h3>
             <ul>
-              <li>Java</li>
-              <li>C</li>
-              <li>Html</li>
-              <li>JavaScript</li>
-              <li>Css</li>
-
+              <li><i class="fa-brands fa-java"></i> Java</li>
+              <li><i class="fa-solid fa-c"></i> C</li>
+              <li><i class="fa-solid fa-code"></i> HTML</li>
+              <li><i class="fa-solid fa-pen-nib"></i> CSS</li>
+              <li><i class="fa-brands fa-js"></i> JavaScript</li>
+              <li><i class="fa-solid fa-database"></i> SQL</li>
             </ul>
           </div>
-          <!-- Frameworks part -->
-          <div id="framework">
+          <div class="skill-block">
             <h3>Web development</h3>
             <ul>
-              <li>React js</li>
-              <li>Node js</li>
-              <li>Express</li>
-              <li>Mongo DB</li>
-              <li>JavaScript</li>
+              <li><i class="fa-brands fa-react"></i> React</li>
+              <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+              <li><i class="fa-solid fa-code-branch"></i> Express</li>
+              <li><i class="fa-solid fa-leaf"></i> MongoDB</li>
+              <li><i class="fa-solid fa-plug"></i> REST APIs</li>
+              <li><i class="fa-solid fa-seedling"></i> Spring Boot</li>
             </ul>
           </div>
-          <!-- skills part -->
-          <div>
-            <h3>Skills</h3>
+          <div class="skill-block">
+            <h3>Core strengths</h3>
             <ul>
-              <li>Data Structures</li>
-              <li>OOPS</li>
-              <li>DBMS</li>
-              <li>Operating Systems</li>
-              <li>Networking</li>
+              <li><i class="fa-solid fa-layer-group"></i> Data Structures</li>
+              <li><i class="fa-solid fa-cubes"></i> OOP</li>
+              <li><i class="fa-solid fa-database"></i> DBMS</li>
+              <li><i class="fa-solid fa-microchip"></i> Operating Systems</li>
+              <li><i class="fa-solid fa-network-wired"></i> Networking</li>
             </ul>
           </div>
         </div>
-        <div class="line"></div>
+        <div class="divider"></div>
       </div>
-      <div class="portfolio-link">
-        <div class="work work-one">
-          <div><span> Projects</span><i class="fa-solid fa-arrow-down"></i></div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="about" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow color2">Selected work</p>
+          <h2 class="color2">Projects</h2>
         </div>
-        <ul class="social">
-          <li>
-            <a
-              href="https://github.com/Nithin134
-            "
-              ><i class="fa-brands fa-github-square"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/nithin-tirukkovalluri-09aa66311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTYSdE4UxTnKtILq3gIdhFA%3D%3D
-            "
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/Nithin134"
-              ><i class="fa-regular fa-hand-peace"></i
-            ></a>
-          </li>
-          
-          <li>
-            <a href="mailto:balajiraotirukkovalluri@gmail.com"
-              ><i class="fa-solid fa-m"></i
-            ></a>
-          </li>
-        </ul>
-        <div class="work work-two">
-          <div><i class="fa-solid fa-arrow-down"></i><span> Projects</span></div>
+        <div class="about_content" id="about_content">
+          <article class="project-card">
+            <div class="project-media">
+              <img
+                src="https://static.wixstatic.com/media/ea6ac8_460f0c2349c44ac7b7aa7cbec1948d21~mv2.jpg/v1/fill/w_2218,h_1268,al_c,q_90/ea6ac8_460f0c2349c44ac7b7aa7cbec1948d21~mv2.webp"
+                alt="Personal Portfolio preview"
+              />
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                  A fully responsive personal portfolio built using HTML, CSS,
+                  and JavaScript. It showcases my skills, projects, education,
+                  and contact details with a clean and modern UI designed to
+                  impress recruiters.
+                </p>
+              </div>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-actions">
+                <button
+                  type="button"
+                  class="btn"
+                  data-open="popup"
+                  data-title="Personal Portfolio"
+                  data-image="https://static.wixstatic.com/media/ea6ac8_460f0c2349c44ac7b7aa7cbec1948d21~mv2.jpg/v1/fill/w_2218,h_1268,al_c,q_90/ea6ac8_460f0c2349c44ac7b7aa7cbec1948d21~mv2.webp"
+                  data-content="A fully responsive personal portfolio built using HTML, CSS, and JavaScript. It showcases my skills, projects, education, and contact details with a clean and modern UI designed to impress recruiters."
+                  data-tech="HTML, CSS, JavaScript"
+                  data-live="https://nithinportfolioin.netlify.app/"
+                  data-source="https://github.com/Nithin134/personal-portfolio"
+                >
+                  View details
+                </button>
+                <a class="btn btn-secondary" href="https://nithinportfolioin.netlify.app/"
+                  >Live site</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img
+                src="https://dpbnri2zg3lc2.cloudfront.net/en/wp-content/uploads/2021/01/web_dev_pillar_page.jpg"
+                alt="Subash Chandrabose Trust preview"
+              />
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Subash Chandrabose Trust</h3>
+                <p>
+                  Designed and developed a responsive and accessible non-profit
+                  organization website using HTML5, CSS3, and JavaScript.
+                </p>
+              </div>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-actions">
+                <button
+                  type="button"
+                  class="btn"
+                  data-open="popup"
+                  data-title="Subash Chandrabose Trust"
+                  data-image="https://dpbnri2zg3lc2.cloudfront.net/en/wp-content/uploads/2021/01/web_dev_pillar_page.jpg"
+                  data-content="Designed and developed a responsive and accessible non-profit organization website using HTML5, CSS3, and JavaScript."
+                  data-tech="HTML, CSS, JavaScript"
+                  data-live="https://subhashchandrabosecharitabletrust.in"
+                  data-source="https://github.com/Chrissiku/Portfolio-mobile"
+                >
+                  View details
+                </button>
+                <a class="btn btn-secondary" href="https://subhashchandrabosecharitabletrust.in"
+                  >Live site</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+                alt="Splitaaara preview"
+              />
+            </div>
+            <div class="project-body">
+              <div>
+                <h3>Splitaaara</h3>
+                <p>
+                  Splitaaara is a collaborative expense-sharing web application
+                  designed for roommates and group activities. It allows users
+                  to create rooms, add participants by email or phone, and
+                  manage shared expenses with automatic split calculations.
+                </p>
+              </div>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+              <div class="project-actions">
+                <button
+                  type="button"
+                  class="btn"
+                  data-open="popup"
+                  data-title="Splitaaara"
+                  data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+                  data-content="Splitaaara is a collaborative expense-sharing web application designed for roommates and group activities. It allows users to create rooms, add participants by email or phone, and manage shared expenses with automatic split calculations."
+                  data-tech="React, Node.js, Express, MongoDB"
+                  data-live="https://splitaaara.netlify.app/"
+                  data-source="https://github.com/Nithin134/Split-fron"
+                >
+                  View details
+                </button>
+                <a class="btn btn-secondary" href="https://splitaaara.netlify.app/"
+                  >Live site</a
+                >
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow color2">Academic background</p>
+          <h2 class="section-title color2">Education</h2>
+        </div>
+        <div class="education-cards">
+          <div class="edu-card">
+            <div class="edu-header">
+              <h3>Aditya College of Engineering & Technology</h3>
+              <p>Bachelor of Technology</p>
+            </div>
+            <div class="edu-body">
+              <p><strong>Branch:</strong> Computer Science and Engineering</p>
+              <p>Surampalem, Andhra Pradesh</p>
+              <p class="edu-year">2022 – 2026</p>
+            </div>
+          </div>
 
-    <!-- Main section -->
-    <section class="about" id="about">
-      <h2 class="color2">My Projects</h2>
-      <div class="line"></div>
+          <div class="edu-card">
+            <div class="edu-header">
+              <h3>Sri Chaitanya Junior College</h3>
+              <p>Intermediate – Pre-Engineering</p>
+            </div>
+            <div class="edu-body">
+              <p>Rajahmundry, Andhra Pradesh</p>
+              <p class="edu-year">2020 – 2022</p>
+            </div>
+          </div>
 
-      <div class="about_content" id="about_content">
-        <!-- Work content here-->
+          <div class="edu-card">
+            <div class="edu-header">
+              <h3>Bhashyam E.M High School</h3>
+              <p>10th Class – Science</p>
+            </div>
+            <div class="edu-body">
+              <p>Rajahmundry, Andhra Pradesh</p>
+              <p class="edu-year">2015 – 2020</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    
-  <!-- Education Section -->
-<section id="education" class="education-section">
-  <h2 class="section-title color2">Education</h2>
-
-  <div class="education-cards">
-
-    <div class="edu-card">
-      <div class="edu-header">
-        <h3>Aditya College of Engineering & Technology</h3>
-        <p>Bachelor of Technology</p>
-      </div>
-      <div class="edu-body">
-        <p><strong>Branch:</strong> Computer Science and Engineering</p>
-        <p>Surampalem, Andhra Pradesh</p>
-        <p class="edu-year">2022 – 2026</p>
-      </div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-header">
-        <h3>Sri Chaitanya Junior College</h3>
-        <p>Intermediate – Pre-Engineering</p>
-      </div>
-      <div class="edu-body">
-        <p>Rajahmundry, Andhra Pradesh</p>
-        <p class="edu-year">2020 – 2022</p>
-      </div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-header">
-        <h3>Bhashyam E.M High School</h3>
-        <p>10th Class – Science</p>
-      </div>
-      <div class="edu-body">
-        <p>Rajahmundry, Andhra Pradesh</p>
-        <p class="edu-year">2015 – 2020</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 
     <!-- contact section -->
     <section class="contact" id="contact">
-      <h3 class="color2 title contact-title1">Let’s chat!</h3>
-      <h3 class="color2 title contact-title2">CONTACT US</h3>
-      <div class="contact-text">
-        <p>
-           Whether you're a recruiter, fellow developer, or someone with a cool idea — feel free to drop a message. I'm always open to new opportunities, collaborations, or just a tech chat. 
-        </p>
-      </div>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xayvleal" method="post" id="user_form">
-          <label for="user_name"></label>
-          <input
-            type="text"
-            name="user_name"
-            id="user_name"
-            maxlength="30"
-            minlength="1"
-            required
-            placeholder="Enter your name"
-          />
-          <label for="email"></label>
-          <input
-            type="email"
-            required
-            name="email"
-            id="email"
-            placeholder="Enter your Email"
-          />
-          <label for="msg"></label>
-          <textarea
-            name="msg"
-            id="msg"
-            cols="20"
-            rows="5"
-            maxlength="500"
-            minlength="5"
-            required
-            placeholder="Enter text here"
-          ></textarea>
-          <small class="alert"></small>
-          <button type="submit" class="btn" id="submit">Send</button>
-        </form>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow color2">Let’s talk</p>
+          <h3 class="color2 title">Contact</h3>
+        </div>
+        <div class="contact-text">
+          <p>
+            Whether you're a recruiter, fellow developer, or someone with a cool
+            idea — feel free to drop a message. I'm always open to opportunities,
+            collaborations, or a quick tech chat.
+          </p>
+        </div>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xayvleal" method="post" id="user_form">
+            <label for="user_name" class="sr-only">Name</label>
+            <input
+              type="text"
+              name="user_name"
+              id="user_name"
+              maxlength="30"
+              minlength="1"
+              required
+              placeholder="Your name"
+            />
+            <label for="email" class="sr-only">Email</label>
+            <input
+              type="email"
+              required
+              name="email"
+              id="email"
+              placeholder="Your email"
+            />
+            <label for="msg" class="sr-only">Message</label>
+            <textarea
+              name="msg"
+              id="msg"
+              cols="20"
+              rows="5"
+              maxlength="500"
+              minlength="5"
+              required
+              placeholder="Tell me about your idea"
+            ></textarea>
+            <small class="alert"></small>
+            <button type="submit" class="btn" id="submit">Send message</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <!-- Footer section -->
     <footer>
-      <div class="foot-line"></div>
-      <div class="footer-content">
-        <ul class="social">
+      <div class="container footer-content">
+        <p>© 2024 Nithin Tirukkovalluri</p>
+        <ul class="social" aria-label="Footer social links">
           <li>
-            <a href="https://github.com/Nithin134"
-              ><i class="fa-brands fa-github-square"></i
-            ></a>
+            <a href="https://github.com/Nithin134">
+              <i class="fa-brands fa-github"></i>
+            </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/nithin-tirukkovalluri-09aa66311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTYSdE4UxTnKtILq3gIdhFA%3D%3D"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
+            <a
+              href="https://www.linkedin.com/in/nithin-tirukkovalluri-09aa66311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTYSdE4UxTnKtILq3gIdhFA%3D%3D"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
           </li>
           <li>
-            <a href="https://github.com/Nithin134"
-              ><i class="fa-regular fa-hand-peace"></i
-            ></a>
-          </li>
-          
-          <li>
-            <a href="mailto:balajiraotirukkovalluri@gmail.com"
-              ><i class="fa-solid fa-m"></i
-            ></a>
+            <a href="mailto:balajiraotirukkovalluri@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </li>
         </ul>
-        <p><a href="mailto:balajiraotirukkovalluri@gmail.com">balajiraotirukkovalluri@gmail.com</a></p>
       </div>
     </footer>
 

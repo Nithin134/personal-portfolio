@@ -2,41 +2,55 @@ const sidebar = document.querySelector('header .menu ul');
 const mobileMenu = document.querySelector('.menu-icon');
 const modal = document.querySelector('#popup');
 
-function showModal() {
-  modal.style.display = 'block';
-}
+if (sidebar && mobileMenu) {
+  const menuIcon = mobileMenu.firstElementChild;
 
-// Show and hide Menu
-function hideMenu() {
   sidebar.addEventListener('click', () => {
-    sidebar.style.display = 'none';
-    mobileMenu.firstElementChild.classList.replace('fa-times', 'fa-bars');
+    if (window.innerWidth <= 768) {
+      sidebar.style.display = 'none';
+      menuIcon?.classList.replace('fa-times', 'fa-bars');
+    }
+  });
+
+  mobileMenu.addEventListener('click', () => {
+    if (!menuIcon) {
+      return;
+    }
+
+    if (menuIcon.classList.contains('fa-bars')) {
+      sidebar.style.display = 'flex';
+      menuIcon.classList.replace('fa-bars', 'fa-times');
+    } else {
+      sidebar.style.display = 'none';
+      menuIcon.classList.replace('fa-times', 'fa-bars');
+    }
   });
 }
 
-mobileMenu.addEventListener('click', () => {
-  if (mobileMenu.firstElementChild.classList.contains('fa-bars')) {
-    sidebar.style.display = 'flex';
-    mobileMenu.firstElementChild.classList.replace('fa-bars', 'fa-times');
-    hideMenu();
-  } else {
-    sidebar.style.display = 'none';
-    mobileMenu.firstElementChild.classList.replace('fa-times', 'fa-bars');
+function showModal() {
+  if (modal) {
+    modal.style.display = 'block';
   }
-});
-
-function hideModal() {
-  modal.style.display = 'none';
 }
 
-// Display specific post to the popup
+function hideModal() {
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
 const modalButtons = document.querySelectorAll('[data-open="popup"]');
 
 modalButtons.forEach((btnShow) => {
   btnShow.addEventListener('click', () => {
+    if (!modal) {
+      return;
+    }
+
     const techList = btnShow.dataset.tech
       ? btnShow.dataset.tech.split(',').map((item) => item.trim())
       : [];
+
     showModal();
     modal.innerHTML = `
       <div class="modal">
@@ -64,67 +78,61 @@ modalButtons.forEach((btnShow) => {
           </div>
         </div>
       </div>
-      `;
+    `;
+
     const hideModalBtn = document.querySelector('.close_btn');
-    hideModalBtn.addEventListener('click', () => {
-      hideModal();
-    });
+    hideModalBtn?.addEventListener('click', hideModal);
   });
 });
 
-// Form Validation
 const form = document.querySelector('#user_form');
-const Alert = document.querySelector('.alert');
+const alertBox = document.querySelector('.alert');
 const email = document.querySelector('#email');
-const Mybtn = document.querySelector('#submit');
-
-function validateEmailAddress() {
-  const regex = /[A-Z]/;
-  const emailContent = email.value;
-  if (regex.test(emailContent)) {
-    Alert.style.display = 'block';
-    Mybtn.disabled = true;
-    Alert.innerHTML = 'Your email address should not contain uppercase letters (lowercase only!).';
-  } else {
-    Alert.style.display = 'none';
-    Alert.innerHTML = '';
-    Mybtn.disabled = false;
-  }
-}
-
-email.addEventListener('input', () => {
-  validateEmailAddress();
-});
-
-form.addEventListener('submit', () => {
-  validateEmailAddress();
-});
-
-// preserve data in the browser
+const submitButton = document.querySelector('#submit');
 const userName = document.querySelector('#user_name');
 const message = document.querySelector('#msg');
 
-function fillLocalStorage() {
+function validateEmailAddress() {
+  if (!email || !alertBox || !submitButton) {
+    return;
+  }
+
+  const regex = /[A-Z]/;
+  const emailContent = email.value;
+
+  if (regex.test(emailContent)) {
+    alertBox.style.display = 'block';
+    submitButton.disabled = true;
+    alertBox.innerHTML = 'Your email address should not contain uppercase letters (lowercase only!).';
+  } else {
+    alertBox.style.display = 'none';
+    alertBox.innerHTML = '';
+    submitButton.disabled = false;
+  }
+}
+
+if (form && email) {
+  email.addEventListener('input', validateEmailAddress);
+  form.addEventListener('submit', validateEmailAddress);
+
   form.addEventListener('input', () => {
+    if (!userName || !message) {
+      return;
+    }
+
     const userInput = {
       user_name: userName.value,
       email: email.value,
       your_message: message.value,
     };
+
     localStorage.setItem('userInput', JSON.stringify(userInput));
   });
-}
 
-function getLocalStorage() {
   const localUserData = JSON.parse(localStorage.getItem('userInput'));
-  if (!localUserData) {
-    return;
+  if (localUserData && userName && message) {
+    userName.value = localUserData.user_name ?? '';
+    email.value = localUserData.email ?? '';
+    message.value = localUserData.your_message ?? '';
   }
-
-  userName.value = localUserData.user_name;
-  email.value = localUserData.email;
-  message.value = localUserData.your_message;
 }
-
-fillLocalStorage();
-getLocalStorage();

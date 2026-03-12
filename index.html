@@ -195,6 +195,7 @@
             <div class="project-media">
               <img
                 src="https://i.pinimg.com/1200x/b3/be/3a/b3be3a3d7253c5e0d796574cae5a3391.jpg"
+                alt="Subash Chandrabose Trust preview"
               />
             </div>
             <div class="project-body">
@@ -249,15 +250,29 @@
         </div>
 
         <div class="contact-form">
-          <form action="https://formspree.io/f/xayvleal" method="post">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
+          <form id="user_form" action="https://formspree.io/f/xayvleal" method="post">
+            <input
+              id="user_name"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
             <textarea
+              id="msg"
               name="message"
               placeholder="Tell me about your idea"
               required
             ></textarea>
-            <button class="btn" type="submit">Send message</button>
+            <p class="alert" role="status" aria-live="polite"></p>
+            <button id="submit" class="btn" type="submit">Send message</button>
           </form>
         </div>
       </div>
